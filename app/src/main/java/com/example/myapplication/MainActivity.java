@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_3.setOnClickListener(this);
 
 
-        t2 = new Toast(getApplicationContext());
+
         t3 = new Toast(getApplicationContext());
 
 
@@ -51,12 +51,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_2:
+                t2 = new Toast(getApplicationContext());
                 LayoutInflater inflater = getLayoutInflater();
                 View layout = inflater.inflate(R.layout.custom_toast,(ViewGroup) findViewById(R.id.custom_toast_layout));
-                TextView tv = layout.findViewById(R.id.tv1);
-                tv.setText("Change");
                 t2.setView(layout);
-                t2.setGravity(Gravity.BOTTOM|Gravity.RIGHT,0,0);
+                t2.setGravity(Gravity.BOTTOM|Gravity.RIGHT,10,10);
                 t2.setDuration(Toast.LENGTH_SHORT);
                 t2.show();
                 break;

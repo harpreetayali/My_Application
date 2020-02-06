@@ -27,12 +27,19 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Hello" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    >
 
     <Button
         android:id="@+id/btn_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button 1"
+        android:layout_weight="1"
         android:textAllCaps="false"
 
         />
@@ -42,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button 2"
+        android:layout_weight="1"
         android:textAllCaps="false"
 
         />
@@ -51,7 +59,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button 3"
+        android:layout_weight="1"
         android:textAllCaps="false" />
+
+</LinearLayout>
 
 
 </LinearLayout>

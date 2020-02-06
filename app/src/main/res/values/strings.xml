@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="register_text">Don\'t have an account? <u>Register</u></string>
+    <string name="login_text">Have an account? <u>Login</u></string>
 </resources>
