@@ -32,30 +32,78 @@
         android:text="Register"
         android:textColor="@color/colorBlack"/>
 
-    <EditText
-        android:id="@+id/et_username"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/username_layout"
+        android:layout_marginTop="35dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/edittext_bg"
-        android:layout_below="@+id/register_txt"
-        android:inputType="textPersonName"
-        android:hint="snap@gmail.com"
-        android:elevation="2dp"
-        android:drawableLeft="@drawable/person"
-        android:drawablePadding="10dp"/>
+        android:layout_below="@id/register_txt"
+
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/et_user_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:inputType="textPersonName"
+            android:hint="First Name"
+            android:elevation="2dp"
+            android:drawableLeft="@drawable/person"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/et_user_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:inputType="textPersonName"
+            android:hint="Last Name"
+            android:elevation="2dp"
+            android:drawableLeft="@drawable/person"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="10dp"/>
+
+
+
+
+    </LinearLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/et_username"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:background="@drawable/edittext_bg"-->
+<!--        android:layout_below="@+id/username_layout"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:hint="snap@gmail.com"-->
+<!--        android:elevation="2dp"-->
+<!--        android:drawableLeft="@drawable/person"-->
+<!--        android:drawablePadding="10dp"/>-->
 
     <EditText
-        android:id="@+id/et_number"
+        android:id="@+id/et_mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="35dp"
         android:background="@drawable/edittext_bg"
-        android:layout_below="@+id/et_username"
+        android:layout_below="@+id/username_layout"
         android:inputType="number"
         android:hint="9987654321"
         android:elevation="2dp"
@@ -69,7 +117,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="35dp"
         android:background="@drawable/edittext_bg"
-        android:layout_below="@+id/et_number"
+        android:layout_below="@+id/et_mobile"
         android:inputType="textEmailAddress"
         android:hint="snap@gmail.com"
         android:elevation="2dp"

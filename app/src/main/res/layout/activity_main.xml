@@ -64,5 +64,20 @@
 
 </LinearLayout>
 
+<!--    <fragment-->
+<!--        android:name="com.example.myapplication.BlankFragment"-->
+<!--        android:id="@+id/my_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/social_icons"-->
+<!--        tools:layout="@layout/fragment_blank" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"
+        />
+
+
 
 </LinearLayout>

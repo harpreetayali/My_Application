@@ -14,5 +14,6 @@
         android:text="Custom Toast"
         android:textSize="14sp"
         android:textStyle="bold"
+        android:textColor="@color/colorWhite"
         />
 </LinearLayout>
