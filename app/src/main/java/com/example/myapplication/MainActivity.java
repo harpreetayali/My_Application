@@ -22,7 +22,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
-    private GoogleMap mMap;
+
 
     private Button btn_1,btn_2,btn_3;
     private Toast t1,t2,t3;
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 t2.setGravity(Gravity.BOTTOM|Gravity.RIGHT,10,10);
                 t2.setDuration(Toast.LENGTH_SHORT);
                 t2.show();
+
 
 
                 break;
