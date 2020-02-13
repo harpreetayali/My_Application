@@ -16,7 +16,7 @@
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:src="@drawable/camera"
+        app:srcCompat="@drawable/camera"
         />
 
     <TextView
@@ -108,13 +108,13 @@
             android:id="@+id/fb_icon"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/facebook"
+            app:srcCompat="@drawable/facebook"
             android:layout_marginRight="10dp"/>
         <ImageView
             android:id="@+id/google_icon"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/google_plus"
+            app:srcCompat="@drawable/google_plus"
             />
 
 
