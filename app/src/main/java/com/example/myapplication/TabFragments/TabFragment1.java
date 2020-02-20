@@ -74,7 +74,7 @@ public class TabFragment1 extends Fragment {
 
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-
+        
         RecyclerViewClickListener clickListener = (view1, position) ->
         {
                t2 = new Toast(getActivity());

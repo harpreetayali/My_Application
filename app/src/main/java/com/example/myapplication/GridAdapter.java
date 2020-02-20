@@ -20,8 +20,6 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.MyViewHolder>
 
 
     private RecyclerViewClickListener mListener;
-
-
     ArrayList<RecyclerItemModel> mArrayList;
 
     public GridAdapter(ArrayList<RecyclerItemModel> arrayList, RecyclerViewClickListener clickListener)
