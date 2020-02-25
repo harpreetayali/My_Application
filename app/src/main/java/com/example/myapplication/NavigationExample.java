@@ -7,19 +7,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.app.SearchManager;
-import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.SearchView;
-import android.widget.Toast;
 
 import com.example.myapplication.TabFragments.TabFragment1;
 import com.example.myapplication.TabFragments.TabFragment2;
@@ -75,8 +66,8 @@ public class NavigationExample extends AppCompatActivity implements NavigationVi
         });
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-    }
 
+    }
 
     @Override
     public void onBackPressed()
@@ -127,6 +118,8 @@ public class NavigationExample extends AppCompatActivity implements NavigationVi
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new TabFragment3()).commit();
                 drawer.closeDrawer(GravityCompat.START);
                 break;
+            case R.id.nav_share:
+                startActivity(new Intent(this, SingletonGetData.class));
         }
         return false;
     }

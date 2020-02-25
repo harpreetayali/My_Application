@@ -61,10 +61,11 @@ public class FastScrollRecyclerViewItemDecoration extends RecyclerView.ItemDecor
                 textPaint.setFakeBoldText(true);
                 textPaint.setTextSize((scaledWidth / 2));
                 canvas.drawText(sections[i].toUpperCase(),
-                        sx + textPaint.getTextSize() / 2, scaledHeight * (i + 1), textPaint);
+                        sx + textPaint.getTextSize() / 2, sy + parent.getPaddingTop() + scaledHeight * (i + 1), textPaint);
                 textPaint.setTextSize(scaledWidth);
                 canvas.drawText("•",
-                        sx - textPaint.getTextSize()/3,  scaledHeight * (i + 1) + scaledHeight/3, textPaint);
+                        sx - textPaint.getTextSize()/3,  sy+parent.getPaddingTop()
+                                + scaledHeight * (i + 1) + scaledHeight/3, textPaint);
 
             } else {
                 textPaint.setColor(Color.DKGRAY);
@@ -72,7 +73,8 @@ public class FastScrollRecyclerViewItemDecoration extends RecyclerView.ItemDecor
                 textPaint.setFakeBoldText(false);
                 textPaint.setTextSize(scaledWidth / 2);
                 canvas.drawText(sections[i].toUpperCase(),
-                        sx + textPaint.getTextSize() / 2, scaledHeight * (i + 1), textPaint);
+                        sx + textPaint.getTextSize() / 2, sy + parent.getPaddingTop()
+                                +  scaledHeight * (i + 1), textPaint);
             }
 
         }

@@ -10,13 +10,18 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name=".CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingletonExamlpe"></activity>
+        <activity android:name=".CollapsingToolbar">
+
+        </activity>
+        <activity android:name=".SingletonSetData"></activity>
+        <activity android:name=".SingletonGetData" />
         <activity
             android:name=".NavigationExample"
             android:theme="@style/AppTheme.NoActionBar">
@@ -34,7 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListViewExample"></activity>
+        <activity android:name=".ListViewExample" />
         <activity android:name=".SliderActivity" />
         <activity android:name=".TabActivity.ExampleTabLayout" />
         <activity android:name=".CameraIntent" />

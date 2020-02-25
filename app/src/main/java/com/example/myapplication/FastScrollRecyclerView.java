@@ -76,12 +76,12 @@ public class FastScrollRecyclerView extends RecyclerView
 
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN: {
-                    if (x < sx - scaledWidth  || y > (scaledHeight*sections.length))
+                    if (x < sx - scaledWidth  || y < sy || y > (scaledHeight*sections.length))
                         return super.onTouchEvent(event);
                     else {
                         // We touched the index bar
                         float yy = y - this.getPaddingTop() - getPaddingBottom() - sy;
-                        int currentPosition = (int) Math.floor(y / scaledHeight);
+                        int currentPosition = (int) Math.floor(yy / scaledHeight);
                         if(currentPosition<0)currentPosition=0;
                         if(currentPosition>=sections.length)currentPosition=sections.length-1;
                         section = sections[currentPosition];
@@ -100,7 +100,7 @@ public class FastScrollRecyclerView extends RecyclerView
                         return super.onTouchEvent(event);
                     else {
                         float yy = y - sy;
-                        int currentPosition = (int) Math.floor(y / scaledHeight);
+                        int currentPosition = (int) Math.floor(yy / scaledHeight);
                         if(currentPosition<0)currentPosition=0;
                         if(currentPosition>=sections.length)currentPosition=sections.length-1;
                         section = sections[currentPosition];

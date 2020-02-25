@@ -7,19 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".TabFragments.TabFragment3"
     >
-    <androidx.appcompat.widget.SearchView
+<!--    <androidx.appcompat.widget.SearchView-->
 
-        android:id="@+id/action_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        app:iconifiedByDefault="false"
-        android:layout_above="@+id/recycler_view"
+<!--        android:id="@+id/action_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/colorWhite"-->
+<!--        app:iconifiedByDefault="false"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_above="@+id/recycler_view"-->
 
-        />
+<!--        />-->
     <com.example.myapplication.FastScrollRecyclerView
         android:id="@+id/recycler_contact"
-        android:layout_below="@+id/action_search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"

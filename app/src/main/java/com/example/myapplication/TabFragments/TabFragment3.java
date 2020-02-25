@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,9 +22,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 import com.example.myapplication.ContactAdapter;
 import com.example.myapplication.FastScrollRecyclerViewItemDecoration;
@@ -73,8 +78,10 @@ public class TabFragment3 extends Fragment {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
 
     }
 
@@ -93,7 +100,7 @@ public class TabFragment3 extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_contact);
 
-        searchView = view.findViewById(R.id.action_search);
+//        searchView = view.findViewById(R.id.action_search);
         searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
 
         contact_list_btn = view.findViewById(R.id.show_data);
@@ -124,10 +131,20 @@ public class TabFragment3 extends Fragment {
         });
 
 
+
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater)
+    {
+        inflater.inflate(R.menu.search_menu,menu);
+        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        SearchView.SearchAutoComplete searchAutoComplete = searchView.findViewById(androidx.appcompat.R.id.search_src_text);
+        searchAutoComplete.setHintTextColor(Color.WHITE);
+
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
         searchView.setMaxWidth(Integer.MAX_VALUE);
         searchView.setQueryHint("Search Contact");
-        searchView.setBackgroundColor(Color.WHITE);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -141,29 +158,22 @@ public class TabFragment3 extends Fragment {
                 return false;
             }
         });
+
+
     }
 
-//    @Override
-//    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater)
-//    {
-//        inflater.inflate(R.menu.search_menu,menu);
-//
-//
-//
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item)
-//    {
-//        int id = item.getItemId();
-//
-//
-//        if (id == R.id.action_search) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item)
+    {
+        int id = item.getItemId();
+
+
+        if (id == R.id.action_search) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     public void getContactsIntoArrayList() {
 
