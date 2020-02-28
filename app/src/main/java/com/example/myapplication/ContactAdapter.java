@@ -1,22 +1,16 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.RadioButton;
-import android.widget.SectionIndexer;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import com.turingtechnologies.materialscrollbar.INameableAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -104,7 +98,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
     @Override
     public ContactAdapter.ContactViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.contact_list_item,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_contact_item,parent,false);
         View v1 = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_tab_fragment3,parent,false);
 
         return new ContactViewHolder(v,v1);

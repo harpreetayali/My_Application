@@ -98,22 +98,24 @@ public class TabFragment3 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.recycler_contact);
 
-//        searchView = view.findViewById(R.id.action_search);
-        searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
-
-        contact_list_btn = view.findViewById(R.id.show_data);
-
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-
-        StoreContacts = new ArrayList<>();
 
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_CONTACTS}, RequestPermissionCode);
-        } else {
+        }
+        else {
+            recyclerView = view.findViewById(R.id.recycler_contact);
+
+//        searchView = view.findViewById(R.id.action_search);
+            searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+
+            contact_list_btn = view.findViewById(R.id.show_data);
+
+            recyclerView.setHasFixedSize(true);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
+            StoreContacts = new ArrayList<>();
 
             getContactsIntoArrayList();
             calculateIndexesForName(StoreContacts);

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.Timer;
@@ -24,8 +26,14 @@ public class CollapsingToolbar extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collapsing_toolbar);
 
-        Toolbar toolbar = findViewById(R.id.collapse_toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_collapse);
         setSupportActionBar(toolbar);
+
+        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar_layout);
+        collapsingToolbarLayout.setTitle("Collapsing Toolbar");
+        collapsingToolbarLayout.setExpandedTitleColor(Color.BLACK);
+        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.WHITE);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewPager = findViewById(R.id.slider_viewPager);
         indicator = findViewById(R.id.slider_indicator);
@@ -44,21 +52,6 @@ public class CollapsingToolbar extends AppCompatActivity
 
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new SliderTimer(),2000,4000);
-
-
-        AppBarLayout mAppBarLayout = findViewById(R.id.app_bar);
-        mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-
-
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset)
-            {
-
-            }
-        });
-
-
-
 
     }
     private class SliderTimer extends TimerTask {

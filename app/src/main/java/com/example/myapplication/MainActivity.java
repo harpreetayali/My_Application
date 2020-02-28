@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_3.setOnClickListener(this);
 
         BlankFragment blankFragment = new BlankFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,blankFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container1,blankFragment).commit();
 
 
 
@@ -63,13 +63,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                t1.show();
 
                 BlankFragment blankFragment = new BlankFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,blankFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,blankFragment).commit();
                 break;
 
             case R.id.btn_2:
                 t2 = new Toast(getApplicationContext());
                 LayoutInflater inflater = getLayoutInflater();
-                View layout = inflater.inflate(R.layout.custom_toast,(ViewGroup) findViewById(R.id.custom_toast_layout));
+                View layout = inflater.inflate(R.layout.custom_toast, findViewById(R.id.custom_toast_layout));
                 t2.setView(layout);
                 t2.setGravity(Gravity.BOTTOM|Gravity.RIGHT,10,10);
                 t2.setDuration(Toast.LENGTH_SHORT);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 t3 = new Toast(getApplicationContext());
                 Toast.makeText(this, "Button 3 pressed", Toast.LENGTH_SHORT).show();
                 SecondFragment secondFragment = new SecondFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,secondFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,secondFragment).commit();
 
 
                 break;

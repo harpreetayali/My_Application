@@ -1,16 +1,13 @@
 package com.example.myapplication;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,11 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
 {
 
-
-
     private RecyclerViewClickListener mListener;
-
-
     ArrayList<RecyclerItemModel> mArrayList;
 
     public MyAdapter(ArrayList<RecyclerItemModel> arrayList, RecyclerViewClickListener clickListener)
@@ -86,7 +79,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>
     {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
 
-        View v = layoutInflater.inflate(R.layout.custom_list_items,parent,false);
+        View v = layoutInflater.inflate(R.layout.list_recycler_items,parent,false);
 
 //        v.setOnClickListener((View view)-> {
 //            Toast.makeText(parent.getContext(),"Item clicked", Toast.LENGTH_SHORT).show();
