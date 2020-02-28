@@ -39,7 +39,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="25dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/bg_edittext"
         android:layout_below="@+id/login_txt"
         android:inputType="textEmailAddress"
         android:hint="snap@gmail.com"
@@ -55,7 +55,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/bg_edittext"
         android:layout_below="@+id/et_email"
         android:inputType="textPassword"
         android:hint="*********"
@@ -82,7 +82,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
-        android:background="@drawable/button_bg"
+        android:background="@drawable/bg_button"
         android:text="Log in"
         android:textColor="@color/colorWhite"/>
 

@@ -23,6 +23,6 @@
         android:text="Get News"
 
         android:layout_alignParentBottom="true"
-        android:background="@drawable/button_bg"
+        android:background="@drawable/bg_button"
         android:textColor="@color/colorWhite"/>
 </RelativeLayout>

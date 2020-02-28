@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter text"
             android:layout_margin="10dp"
-            android:background="@drawable/edittext_bg"/>
+            android:background="@drawable/bg_edittext"/>
 
         <Button
             android:id="@+id/save_btn"

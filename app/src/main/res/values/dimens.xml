@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="fast_scroll_overlay_text_size">100dp</dimen>
+    <dimen name="drop_cap_padding_top">5dp</dimen>
+    <dimen name="drop_cap_padding_right">5dp</dimen>
+
+    <dimen name="drop_cap_text">64sp</dimen>
+    <dimen name="copy_text">21sp</dimen>
+    <dimen name="scroll_view_height">200dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="drop_cap_linespacing_extra">0sp</dimen>
 </resources>

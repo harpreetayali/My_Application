@@ -34,7 +34,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="60dp"
-        android:background="@drawable/button_bg"
+        android:background="@drawable/bg_button"
         android:textColor="@color/colorWhite"
         android:text="Show Data"
         />

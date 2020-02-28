@@ -25,6 +25,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="communication">Communication</string>
+    <string name="period">3 months</string>
 
 
 </resources>
